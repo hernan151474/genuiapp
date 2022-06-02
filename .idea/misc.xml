@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Program Files/Android/Android Studio/genuiapp/genuiapp/app/src/main/res/layout/activity_comercio.xml" value="0.25" />
+        <entry key="..\:/Program Files/Android/Android Studio/genuiapp/genuiapp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Program Files/Android/Android Studio/genuiapp/genuiapp/app/src/main/res/layout/activity_oficio.xml" value="0.25" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/bordes_redondo.xml" value="0.1" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/boton_principal_redondo.xml" value="0.1" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/boton_redondo.xml" value="0.1" />

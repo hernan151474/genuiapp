@@ -7,9 +7,11 @@
         <entry key="..\:/Program Files/Android/Android Studio/genuiapp/genuiapp/app/src/main/res/layout/activity_comercio.xml" value="0.25" />
         <entry key="..\:/Program Files/Android/Android Studio/genuiapp/genuiapp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Program Files/Android/Android Studio/genuiapp/genuiapp/app/src/main/res/layout/activity_oficio.xml" value="0.33" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/borde.xml" value="0.2385" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/bordes_redondo.xml" value="0.1" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/boton_principal_redondo.xml" value="0.1" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/boton_redondo.xml" value="0.1" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/fondo_imagen.xml" value="0.1685" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/ic__020_genui_todos_los_derechos_reservados_.xml" value="0.1" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/ic___2020_genui__todos_los_derechos_reservados_.xml" value="0.1" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/ic_boton_comercio.xml" value="0.1" />
@@ -22,7 +24,9 @@
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/ic_t_rminos_y_condiciones.xml" value="0.1" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/ic_vos_podes.xml" value="0.1" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/font/roboto_bold (2).xml" value="0.1" />
-        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_comercio.xml" value="0.25" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_oficio.xml" value="0.33" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_segunda.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_splash_screen.xml" value="0.17074275362318841" />
       </map>

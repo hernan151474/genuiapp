@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:visibility="visible"
     tools:context=".Que_Hacemos">
 
     <ImageView
@@ -58,6 +60,7 @@
         android:fontFamily="@font/roboto_bold"
         android:text="Objetivo"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.463"
@@ -75,6 +78,7 @@
         android:fontFamily="@font/roboto_bold"
         android:text="¿Que es Genui?"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.463"
@@ -92,6 +96,7 @@
         android:fontFamily="@font/roboto_bold"
         android:text="Valor"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.463"
@@ -109,6 +114,7 @@
         android:fontFamily="@font/roboto_bold"
         android:text="Version Hitos"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.463"
@@ -126,6 +132,7 @@
         android:fontFamily="@font/roboto_bold"
         android:text="Foco Geográfico/Alcance"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.463"

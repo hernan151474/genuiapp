@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Genuiapp">
         <activity
+            android:name=".Que_Hacemos"
+            android:exported="false" />
+        <activity
             android:name=".Quienes_Somos"
             android:exported="false" />
         <activity

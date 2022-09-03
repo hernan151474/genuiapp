@@ -1,14 +1,54 @@
 package com.example.genuiapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class ComercioActivity extends AppCompatActivity {
+
+    private RecyclerView recordsRv;
+
+    private Button genui_btn;
+    private EditText resultado;
+
+    //DB Helper
+    private MyDbHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comercio);
+        recordsRv = findViewById(R.id.recordsRv);
+        int numberOfColumns = 2;
+        recordsRv.setLayoutManager(new GridLayoutManager(this, numberOfColumns));
+        //Inicializamos db helper Clase
+        dbHelper = new MyDbHelper(this);
+
+        loadRecords();
+
+        // Click para Iniciar a añadir y grabar en la activity
+        genui_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Iniciar la Activity
+                startActivity(new Intent(ComercioActivity.this, AgregarRegistroActivity.class));
+            }
+        });
+    }
+
+    private void loadRecords(){
+        AdapterRecord adapterRecord = new AdapterRecord(ComercioActivity.this,
+                dbHelper.getAllRecords(Constants.C_ADDED_TIMESTAMP + " DESC"));
+
+        recordsRv.setAdapter(adapterRecord);
+
+        //Establecer el numero de Registros
+        resultado.setText("Total: "+dbHelper.getRecordsCount());
     }
 }

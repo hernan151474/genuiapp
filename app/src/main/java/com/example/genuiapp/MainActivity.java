@@ -14,6 +14,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+
+    public void Registrar(View view){
+        Intent registrar = new Intent(this, AgregarUser.class);
+        startActivity(registrar);
+    }
+
+    public void Invitado(View view){
+        Intent invitado = new Intent(this, ActivityInicio.class);
+        startActivity(invitado);
+    }
+
+
     public void Oficio (View view){
         Intent oficio = new Intent(this, OficioActivity.class);
         startActivity(oficio);

@@ -18,6 +18,13 @@
         <activity
             android:name=".Valor"
             android:exported="false" />
+
+        <activity android:name=".AgregarUser"
+            android:exported="false"/>
+
+        <activity android:name=".ActivityInicio"
+            android:exported="false"/>
+
         <activity
             android:name=".Que_es_Genui"
             android:exported="false" />

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -16,10 +17,16 @@ public class AgregarUser extends AppCompatActivity {
     private Button user_registrar;
     private String user, password;
 
+=======
+
+public class AgregarUser extends AppCompatActivity {
+
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_user);
+<<<<<<< HEAD
         registrar_user = (EditText) findViewById(R.id.registrar_user);
         registrar_password = (EditText) findViewById(R.id.registrar_password);
         confirmar_password = (EditText) findViewById(R.id.confirmar_password);
@@ -38,4 +45,9 @@ public class AgregarUser extends AppCompatActivity {
             confirmar_password.setText("");
         }
     }
+=======
+    }
+
+
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
 }

@@ -74,7 +74,10 @@
         android:layout_marginTop="36dp"
         android:backgroundTint="@color/botonprincipal"
         android:fontFamily="@font/roboto_bold"
+<<<<<<< HEAD
         android:onClick="registrar"
+=======
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
         android:text="Registrarse"
         android:textAllCaps="false"
         android:textSize="16sp"

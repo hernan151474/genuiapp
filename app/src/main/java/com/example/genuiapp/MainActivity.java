@@ -15,6 +15,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+<<<<<<< HEAD
+=======
+    public void Registrar(View view){
+        Intent registrar = new Intent(this, AgregarUser.class);
+        startActivity(registrar);
+    }
+
+    public void Invitado(View view){
+        Intent invitado = new Intent(this, ActivityInicio.class);
+        startActivity(invitado);
+    }
+
+
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
     public void Oficio (View view){
         Intent oficio = new Intent(this, OficioActivity.class);
         startActivity(oficio);
@@ -25,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(comercio);
     }
 
+<<<<<<< HEAD
 
 
     public void Registrar(View view){
@@ -32,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(registrar);
     }
 
+=======
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
     public void Objetivo (View view){
         Intent objetivo = new Intent(this, ObjetivosActivity.class);
         startActivity(objetivo);

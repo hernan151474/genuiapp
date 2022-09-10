@@ -1,6 +1,9 @@
 package com.example.genuiapp;
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint;
+=======
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -22,17 +25,29 @@ public class MyDbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db){
         //Crea la tabla de la base de datos
         db.execSQL(Constants.CREATE_TABLE);
+<<<<<<< HEAD
         db.execSQL(Constants.CREATE_TABLE1);
+=======
+        db.execSQL(Constants.CREATE_USER);
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
 
+<<<<<<< HEAD
         // actualizar la base de datos (si hay alguna estructura, cambie la versión de db)
 
         //descartar la tabla anterior si existe
         db.execSQL("DROP TABLE IF EXISTS "+ Constants.TABLE_NAME);
 
 
+=======
+         // actualizar la base de datos (si hay alguna estructura, cambie la versión de db)
+
+        //descartar la tabla anterior si existe
+        db.execSQL("DROP TABLE IF EXISTS "+ Constants.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS "+ Constants.TABLE_USER);
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
         //crear tabla de nuevo
         onCreate(db);
     }
@@ -91,7 +106,11 @@ public class MyDbHelper extends SQLiteOpenHelper {
         db.close();
 
 
+<<<<<<< HEAD
         // devuelve la identificación del registro insertado
+=======
+       // devuelve la identificación del registro insertado
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
         return id;
 
     }
@@ -111,7 +130,11 @@ public class MyDbHelper extends SQLiteOpenHelper {
         // recorrer todos los registros y agregarlos a la lista
         if ( cursor.moveToFirst()){
             do {
+<<<<<<< HEAD
                 @SuppressLint("Range") ModelRecord modelRecord = new ModelRecord(
+=======
+                ModelRecord modelRecord = new ModelRecord(
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
                         ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_NAME)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_CATE)),
@@ -159,7 +182,11 @@ public class MyDbHelper extends SQLiteOpenHelper {
         // recorrer todos los registros y agregarlos a la lista
         if ( cursor.moveToFirst()){
             do {
+<<<<<<< HEAD
                 @SuppressLint("Range") ModelRecord modelRecord = new ModelRecord(
+=======
+                ModelRecord modelRecord = new ModelRecord(
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
                         ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_NAME)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_CATE)),
@@ -206,4 +233,8 @@ public class MyDbHelper extends SQLiteOpenHelper {
     }
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e

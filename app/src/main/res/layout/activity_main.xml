@@ -5,124 +5,157 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:visibility="visible"
-    tools:context=".MainActivity">
+    android:scrollbarSize="12dp">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageView34"
+        android:layout_width="161dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338"
-        app:srcCompat="@drawable/fondo" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.397"
-        app:srcCompat="@drawable/ic_menu" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.921"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347"
         app:srcCompat="@drawable/logochico" />
 
+<<<<<<< HEAD
 
     <Button
         android:id="@+id/comercio"
+=======
+    <TextView
+        android:id="@+id/textView47"
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:width="320dp"
-        android:backgroundTint="@color/fondoboton"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/roboto_bold"
-        android:onClick="Comercio"
-        android:text="@string/boton_comercio"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="13sp"
+        android:text="Bienvenido"
+        android:textColor="#000000"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView34" />
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <EditText
+        android:id="@+id/usuario_inicio"
+        android:layout_width="281dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView47" />
+
+    <EditText
+        android:id="@+id/password_inicio"
+        android:layout_width="281dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usuario_inicio" />
+
+    <TextView
+        android:id="@+id/recuperar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="¿Olvidaste la Contraseña?"
+        android:textColor="#000000"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
-        app:srcCompat="@drawable/ic_cuidad" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/ic_vos_podes" />
+        app:layout_constraintTop_toBottomOf="@+id/password_inicio" />
 
     <Button
+        android:id="@+id/login"
+        android:layout_width="169dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/botonprincipal"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Entrar"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recuperar" />
+
+    <Button
+<<<<<<< HEAD
         android:id="@+id/oficio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:width="320dp"
+=======
+        android:id="@+id/invitado"
+        android:layout_width="169dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="4dp"
         android:backgroundTint="@color/fondoboton"
-        android:clickable="true"
         android:fontFamily="@font/roboto_bold"
-        android:onClick="Oficio"
-        android:text="Oficios y Profesiones"
+        android:onClick="Invitado"
+        android:text="Entrar como Invitado"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="13sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+    <View
+        android:id="@+id/view19"
+        android:layout_width="400dp"
+        android:layout_height="6dp"
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
+        android:layout_marginTop="20dp"
+        android:background="@drawable/linea_division"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/comercio" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/invitado" />
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:id="@+id/registrarse"
+        android:layout_width="169dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:width="334dp"
-        android:height="48dp"
-        android:background="@drawable/boton_redondo"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/botonprincipal"
         android:fontFamily="@font/roboto_bold"
-        android:text="quiero ser un genui"
+        android:onClick="Registrar"
+        android:text="Registrarse"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="17sp"
-        app:backgroundTint="@null"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/view19" />
 
-    <TextView
-        android:id="@+id/textView"
+    <View
+        android:id="@+id/view20"
+        android:layout_width="400dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/linea_division"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrarse" />
+
+    <Button
+        android:id="@+id/google"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="172dp"
         android:fontFamily="@font/roboto_regular"
         android:text="© 2020 Genui. Todos los derechos reservados."
@@ -169,11 +202,20 @@
         android:textColor="#000000"
         android:textSize="12sp"
         android:visibility="visible"
+=======
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FF0000"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Entrar con Google"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+>>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/view20"
+        app:layout_constraintVertical_bias="0.078" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

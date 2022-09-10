@@ -17,14 +17,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logochico" />
 
-<<<<<<< HEAD
 
-    <Button
-        android:id="@+id/comercio"
-=======
     <TextView
         android:id="@+id/textView47"
->>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -89,11 +84,6 @@
         app:layout_constraintTop_toBottomOf="@+id/recuperar" />
 
     <Button
-<<<<<<< HEAD
-        android:id="@+id/oficio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-=======
         android:id="@+id/invitado"
         android:layout_width="169dp"
         android:layout_height="64dp"
@@ -109,27 +99,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
+
     <View
         android:id="@+id/view19"
         android:layout_width="400dp"
         android:layout_height="6dp"
->>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/linea_division"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintTop_toBottomOf="@+id/comercio" />
-=======
         app:layout_constraintTop_toBottomOf="@+id/invitado" />
->>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
 
     <Button
         android:id="@+id/registrarse"
         android:layout_width="169dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="@color/botonprincipal"
         android:fontFamily="@font/roboto_bold"
         android:onClick="Registrar"
@@ -144,7 +129,7 @@
         android:id="@+id/view20"
         android:layout_width="400dp"
         android:layout_height="6dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/linea_division"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
@@ -152,70 +137,20 @@
         app:layout_constraintTop_toBottomOf="@+id/registrarse" />
 
     <Button
-        android:id="@+id/google"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginTop="172dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="© 2020 Genui. Todos los derechos reservados."
-        android:textColor="#000000"
-        android:textSize="12sp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oficio" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/logochico" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Política de privacidad"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="169dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Términos y Condiciones"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        android:visibility="visible"
-=======
-        android:layout_marginTop="16dp"
         android:backgroundTint="#FF0000"
         android:fontFamily="@font/roboto_bold"
         android:text="Entrar con Google"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
->>>>>>> 3ed99b4e26ec53417f60b02b54a1aa1f73f5026e
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view20"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintTop_toBottomOf="@+id/view20" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

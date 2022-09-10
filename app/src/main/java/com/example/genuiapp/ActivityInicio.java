@@ -27,15 +27,4 @@ public class ActivityInicio extends AppCompatActivity {
     }
 
 
-    public void Oficio (View view){
-        Intent oficio = new Intent(this, OficioActivity.class);
-        startActivity(oficio);
-    }
-
-    public void Comercio (View view){
-        Intent comercio = new Intent(this, ComercioActivity.class);
-        startActivity(comercio);
-    }
-
 }
-

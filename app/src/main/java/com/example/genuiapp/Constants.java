@@ -5,7 +5,7 @@ public class Constants {
     public static final String DB_NAME = "My_RECORDS_DB";
     //version de base de datos
 
-    public static final int DB_VERSION = 2;
+    public static final int DB_VERSION = 1;
 
     //nombre de la tabla
     public static final String TABLE_NAME = "MY_RECORDS_TABLE";
@@ -40,13 +40,10 @@ public class Constants {
             + C_CATE+ " TEXT,"
             + C_MODA+ " TEXT,"
             + C_MODA_ATE+ " TEXT,"
-
             + C_DELI+ " TEXT,"
             + C_PRODUC+ " TEXT,"
-
-            +C_DELI+ "BOOLEAN,"
-            +C_PRODUC+ "TEXT,"
-
+            +C_DELI+ " BOOLEAN,"
+            +C_PRODUC+ " TEXT,"
             + C_DIRE+ " TEXT,"
             + C_LOCA+ " TEXT,"
             + C_ZONA+ " TEXT,"
@@ -58,13 +55,6 @@ public class Constants {
             + C_IMAGE+ " TEXT,"
             + C_ADDED_TIMESTAMP+ " TEXT,"
             + C_UPDATED_TIMESTAMP+ " TEXT"
-            + ")";
-
-
-    public static final String CREATE_TABLE1 = "CREATE TABLE" + TABLE_USER +"("
-            + C_ID+ " INTEGER PRIMARY KEY,"
-            + C_USER+ " TEXT,"
-            + C_PASSWORD+ " TEXT"
             + ")";
 
     public static final String CREATE_USER = "CREATE TABLE" + TABLE_USER +"("

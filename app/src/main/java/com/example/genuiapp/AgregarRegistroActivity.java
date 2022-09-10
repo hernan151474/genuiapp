@@ -71,9 +71,9 @@ public class AgregarRegistroActivity extends AppCompatActivity {
                 "Imprenta", "Mantenimiento de Vehículos", "Medicina, Salud y Asistentes Domiciliarios", "Ropa y Moda",
                 "Servicios para Mascotas", "Servicios para Oficinas", "Tecnología", "Transporte", "Viajes y Turismo", "Arte"};
         String [] opciones1={"Modalidad de Servicio", "A Domicilio", "Remota (Teleconsulta)", "En Oficina/Consultorio", "A Domicilio/Remota (Teleconsulta)",
-                  "A Domicilio/Remota (Teleconsulta)/En Oficina/Consultorio", "A Domicilio/En Oficina/Consultorio"};
+                "A Domicilio/Remota (Teleconsulta)/En Oficina/Consultorio", "A Domicilio/En Oficina/Consultorio"};
         String [] opciones2={"Localidad", "El Cármen", "Humahuaca", "La Quiaca", "Libertador Gral. San Martín", "Palpalá", "Perico",
-                  "Purmamarca", "San Antonio", "San Salvador de Jujuy", "San Pedro de Jujuy", "Tilcara"};
+                "Purmamarca", "San Antonio", "San Salvador de Jujuy", "San Pedro de Jujuy", "Tilcara"};
         String [] opciones3={"Zona de la Localidad", "Norte", "Sur", "Este", "Oeste", "Centro"};
         ArrayAdapter<String> adapter = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones);
         ArrayAdapter<String> adapter1 = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones1);
@@ -163,7 +163,7 @@ public class AgregarRegistroActivity extends AppCompatActivity {
                 ""+imageUri,
                 ""+timestamp,
                 ""+timestamp
-                );
+        );
 
         Toast.makeText(this, "Registro agregado contra ID: "+id, Toast.LENGTH_SHORT).show();
     }

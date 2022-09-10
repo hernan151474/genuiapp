@@ -15,19 +15,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-    public void Registrar(View view){
-        Intent registrar = new Intent(this, AgregarUser.class);
-        startActivity(registrar);
-    }
-
-    public void Invitado(View view){
-        Intent invitado = new Intent(this, ActivityInicio.class);
-        startActivity(invitado);
-    }
-
-
-
     public void Oficio (View view){
         Intent oficio = new Intent(this, OficioActivity.class);
         startActivity(oficio);
@@ -37,10 +24,6 @@ public class MainActivity extends AppCompatActivity {
         Intent comercio = new Intent(this, ComercioActivity.class);
         startActivity(comercio);
     }
-
-
-
-
 
     public void Objetivo (View view){
         Intent objetivo = new Intent(this, ObjetivosActivity.class);

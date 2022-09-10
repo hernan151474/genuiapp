@@ -83,14 +83,6 @@ public class AdapterRecord extends RecyclerView.Adapter<AdapterRecord.HolderReco
             }
         });
 
-        //manejar clicks de botones (mostrar opciones como editar, eliminar)
-
-        holder.moreBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //FALTA
-            }
-        });
     }
 
     @Override
@@ -102,7 +94,6 @@ public class AdapterRecord extends RecyclerView.Adapter<AdapterRecord.HolderReco
         //vistas
         ImageView profileIv;
         TextView nameTv;
-        ImageButton moreBtn;
         public HolderRecord(@NonNull View itemView){
             super(itemView);
 

@@ -50,7 +50,6 @@ public class MyDbHelper extends SQLiteOpenHelper {
         db.close();
 
         return id;
-
     }
 
     //Inserta datos a la base de datos
@@ -96,7 +95,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
 
         // devuelve la identificación del registro insertado
 
-       // devuelve la identificación del registro insertado
+        // devuelve la identificación del registro insertado
 
         return id;
 
@@ -119,24 +118,24 @@ public class MyDbHelper extends SQLiteOpenHelper {
             do {
 
                 @SuppressLint("Range") ModelRecord modelRecord = new ModelRecord(
-                                ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_NAME)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_CATE)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA_ATE)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_DELI)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_PRODUC)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_DIRE)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_LOCA)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_ZONA)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_PHONE)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_FACE)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_INSTA)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_LINKE)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_DESCRI)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_IMAGE)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_ADDED_TIMESTAMP)),
-                                ""+cursor.getString(cursor.getColumnIndex(Constants.C_UPDATED_TIMESTAMP)));
+                        ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_NAME)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_CATE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA_ATE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_DELI)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_PRODUC)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_DIRE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_LOCA)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_ZONA)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_PHONE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_FACE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_INSTA)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_LINKE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_DESCRI)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_IMAGE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_ADDED_TIMESTAMP)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_UPDATED_TIMESTAMP)));
 
                 // Añadir registro a la list
                 recordsList.add(modelRecord);
@@ -216,6 +215,3 @@ public class MyDbHelper extends SQLiteOpenHelper {
 
 
 }
-
-
-

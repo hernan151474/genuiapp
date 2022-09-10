@@ -21,8 +21,9 @@ public class MyDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db){
         //Crea la tabla de la base de datos
-        db.execSQL(Constants.CREATE_TABLE);
         db.execSQL(Constants.CREATE_USER);
+        db.execSQL(Constants.CREATE_TABLE);
+
 
     }
     @Override
@@ -40,13 +41,14 @@ public class MyDbHelper extends SQLiteOpenHelper {
     }
 
     public long insertUser(String user, String password) {
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db =this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         values.put(Constants.C_USER, user);
         values.put(Constants.C_PASSWORD, password);
 
-        long id=db.insert(Constants.TABLE_USER,null, values);
+        long id = db.insert(Constants.TABLE_USER, null, values);
+
         db.close();
 
         return id;

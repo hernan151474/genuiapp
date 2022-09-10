@@ -21,23 +21,30 @@ public class AgregarUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_user);
 
-        registrar_user = (EditText) findViewById(R.id.registrar_user);
-        registrar_password = (EditText) findViewById(R.id.registrar_password);
-        confirmar_password = (EditText) findViewById(R.id.confirmar_password);
-
+        registrar_user = findViewById(R.id.registrar_user);
+        registrar_password = findViewById(R.id.registrar_password);
+        confirmar_password = findViewById(R.id.confirmar_password);
+        dbHelper = new MyDbHelper(this);
     }
 
     public void registrar(View view) {
-        dbHelper = new MyDbHelper(this);
-        if ((registrar_password) == (confirmar_password)) {
-            user = "" + registrar_user.getText().toString().trim();
-            password = "" + confirmar_password.getText().toString().trim();
-            Toast.makeText(this, "Se Registro con Exito!!!", Toast.LENGTH_SHORT).show();
+
+        String password_registrar = registrar_password.getText().toString();
+        String password_confirmar = confirmar_password.getText().toString();
+        if (password_registrar.contentEquals(password_confirmar)) {
+            user = ""+registrar_user.getText().toString().trim();
+            password = ""+registrar_password.getText().toString().trim();
+            dbHelper.insertUser(
+                    ""+user,
+                    ""+password
+            );
         } else{
             Toast.makeText(this, "No Coincide las Contraseñas, Ingrese Nuevamente", Toast.LENGTH_SHORT).show();
             registrar_password.setText("");
             confirmar_password.setText("");
         }
     }
+
+
 
 }

@@ -34,6 +34,12 @@ public class Constants {
 
 
     //Crea la tabla Query
+    public static final String CREATE_USER = "CREATE TABLE" + TABLE_USER +"("
+            +C_ID + "INTEGER PRIMARY KEY,"
+            +C_USER + "TEXT,"
+            +C_PASSWORD+ "TEXT"
+            +")";
+
     public static  final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME +"("
             + C_ID+ " INTEGER PRIMARY KEY,"
             + C_NAME+ " TEXT,"
@@ -57,11 +63,7 @@ public class Constants {
             + C_UPDATED_TIMESTAMP+ " TEXT"
             + ")";
 
-    public static final String CREATE_USER = "CREATE TABLE" + TABLE_USER +"("
-            +C_ID + "INTEGER PRIMARY KEY,"
-            +C_USER + "TEXT,"
-            +C_PASSWORD+ "TEXT"
-            +")";
+
 
 }
 

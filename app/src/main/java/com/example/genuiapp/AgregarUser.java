@@ -38,6 +38,7 @@ public class AgregarUser extends AppCompatActivity {
                     ""+user,
                     ""+password
             );
+            Toast.makeText(this, "Se Registro con Exito!!", Toast.LENGTH_SHORT).show();
         } else{
             Toast.makeText(this, "No Coincide las Contraseñas, Ingrese Nuevamente", Toast.LENGTH_SHORT).show();
             registrar_password.setText("");

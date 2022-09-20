@@ -1,5 +1,6 @@
 package com.example.genuiapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +21,8 @@ public class ComercioActivity extends AppCompatActivity {
     //DB Helper
     private MyDbHelper dbHelper;
 
+    ActionBar actionBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,16 +33,20 @@ public class ComercioActivity extends AppCompatActivity {
         //Inicializamos db helper Clase
         dbHelper = new MyDbHelper(this);
 
+        //Inicializacion ActionBar
+        actionBar = getSupportActionBar();
+        actionBar.setTitle("Registros");
+
         loadRecords();
 
         // Click para Iniciar a añadir y grabar en la activity
-        genui_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+       // genui_btn.setOnClickListener(new View.OnClickListener() {
+         //  @Override
+           // public void onClick(View v) {
                 //Iniciar la Activity
-                startActivity(new Intent(ComercioActivity.this, AgregarRegistroActivity.class));
-            }
-        });
+             //   startActivity(new Intent(ComercioActivity.this, AgregarRegistroActivity.class));
+            //}
+        //});
     }
 
     private void loadRecords(){
@@ -49,6 +56,12 @@ public class ComercioActivity extends AppCompatActivity {
         recordsRv.setAdapter(adapterRecord);
 
         //Establecer el numero de Registros
-        resultado.setText("Total: "+dbHelper.getRecordsCount());
+        actionBar.setSubtitle("Total: "+dbHelper.getRecordsCount());
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        loadRecords();// Refresca o actualiza la lista de registros
     }
 }

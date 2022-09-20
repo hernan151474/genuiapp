@@ -15,7 +15,6 @@ public class ComercioActivity extends AppCompatActivity {
 
     private RecyclerView recordsRv;
 
-    private Button genui_btn;
     private EditText resultado;
 
     //DB Helper
@@ -49,6 +48,11 @@ public class ComercioActivity extends AppCompatActivity {
         //});
     }
 
+    public void registrar_genui (View view){
+        Intent registrar_genui = new Intent (this, AgregarRegistroActivity.class);
+        startActivity(registrar_genui);
+    }
+
     private void loadRecords(){
         AdapterRecord adapterRecord = new AdapterRecord(ComercioActivity.this,
                 dbHelper.getAllRecords(Constants.C_ADDED_TIMESTAMP + " DESC"));
@@ -57,6 +61,7 @@ public class ComercioActivity extends AppCompatActivity {
 
         //Establecer el numero de Registros
         actionBar.setSubtitle("Total: "+dbHelper.getRecordsCount());
+        //resultado.setText(dbHelper.getRecordsCount());
     }
 
     @Override

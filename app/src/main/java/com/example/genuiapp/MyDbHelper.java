@@ -34,7 +34,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
 
         //descartar la tabla anterior si existe
         db.execSQL("DROP TABLE IF EXISTS "+ Constants.TABLE_NAME);
-
+        db.execSQL("DROP TABLE IF EXISTS "+ Constants.TABLE_USER);
 
         //crear tabla de nuevo
         onCreate(db);
@@ -55,7 +55,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
     }
 
     //Inserta datos a la base de datos
-    public long insertRecord(String name, String cate, String moda, String moda_ate, String deli, String produc, String dire, String loca,
+    public long insertRecord(String name, String regis, String cate, String moda, String moda_ate, String deli, String produc, String dire, String loca,
                              String zona, String phone, String face, String insta, String linke, String descri, String image, String addedTime, String updatedTime){
 
         //get databse grabable porque queremos escribir datos
@@ -69,6 +69,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
 
         // inserta datos
         values.put(Constants.C_NAME, name);
+        values.put(Constants.C_REGIS, regis);
         values.put(Constants.C_CATE, cate);
         values.put(Constants.C_MODA, moda);
         values.put(Constants.C_MODA_ATE, moda_ate);
@@ -110,7 +111,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
 
         ArrayList<ModelRecord> recordsList = new ArrayList<>();
         // consulta para seleccionar registros
-        String selectQuery = " SELECT * FROM " + Constants.TABLE_NAME + " ORDER BY " + orderBy;
+        String selectQuery = " SELECT * FROM " + Constants.TABLE_NAME + " WHERE " +Constants.C_REGIS + "=2131362441" + " ORDER BY " + orderBy;
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -122,6 +123,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
                 @SuppressLint("Range") ModelRecord modelRecord = new ModelRecord(
                         ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_NAME)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_REGIS)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_CATE)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA_ATE)),
@@ -171,6 +173,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
                 @SuppressLint("Range") ModelRecord modelRecord = new ModelRecord(
                         ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_NAME)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_REGIS)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_CATE)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA_ATE)),
@@ -203,7 +206,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
 
     //Obtener el numero de registros
     public int getRecordsCount(){
-        String countQuery = " SELECT * FROM " + Constants.TABLE_NAME;
+        String countQuery = " SELECT * FROM " + Constants.TABLE_NAME + " WHERE " +Constants.C_REGIS + "=2131362441";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
 

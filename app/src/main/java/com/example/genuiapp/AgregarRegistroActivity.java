@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -44,6 +46,9 @@ public class AgregarRegistroActivity extends AppCompatActivity {
     private Spinner modaateEt;
     private Spinner deliEt;
     private Spinner producEt;
+    private RadioButton radioprofe;
+    private RadioButton radioempre;
+    private RadioGroup radio_grup;
     //Actionbar
     private ActionBar actionBar;
     //Permiso de la clase Constants
@@ -57,7 +62,7 @@ public class AgregarRegistroActivity extends AppCompatActivity {
     private String [] storagePermissions;// solo almacenamiento
     // variables (constain datos para guardar)
     private Uri imageUri;
-    private String name, cate, moda, moda_ate, deli, produc, dire, loca, zona, phone, face, insta, linke, descri;
+    private String name, regis, cate, moda, moda_ate, deli, produc, dire, loca, zona, phone, face, insta, linke, descri;
 
     //db helper
     private MyDbHelper dbHelper;
@@ -65,39 +70,36 @@ public class AgregarRegistroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_registro);
+        radio_grup = (RadioGroup) findViewById(R.id.radio_grup);
+        radioprofe=(RadioButton) findViewById(R.id.radioprofe);
+        radioempre=(RadioButton) findViewById(R.id.radioempre);
         cateEt=(Spinner)findViewById(R.id.cateEt);
         modaEt=(Spinner)findViewById(R.id.modaEt);
         locaEt=(Spinner)findViewById(R.id.locaEt);
         zonaEt=(Spinner)findViewById(R.id.zonaEt);
-        modaateEt=(Spinner) findViewById(R.id.modaateEt);
+        modaateEt=(Spinner)findViewById(R.id.modaateEt);
         deliEt=(Spinner)findViewById(R.id.deliEt);
-        producEt=(Spinner) findViewById(R.id.producEt);
-        String [] opciones={"Categoria", "Asesoramiento Contable y Legal", "Belleza y Cuidado Personal", "Comunicación y Diseño",
-                "Cursos y Clases", "Delivery", "Fiestas y Eventos", "Fotografía, Música y Cine", "Hogar y Construcción",
-                "Imprenta", "Mantenimiento de Vehículos", "Medicina, Salud y Asistentes Domiciliarios", "Ropa y Moda",
-                "Servicios para Mascotas", "Servicios para Oficinas", "Tecnología", "Transporte", "Viajes y Turismo", "Arte"};
-        String [] opciones1={"Modalidad de Servicio", "A Domicilio", "Remota (Teleconsulta)", "En Oficina/Consultorio", "A Domicilio/Remota (Teleconsulta)",
+        producEt=(Spinner)findViewById(R.id.producEt);
+        String[] opciones3 = {"Modalidad de Servicio", "A Domicilio", "Remota (Teleconsulta)", "En Oficina/Consultorio", "A Domicilio/Remota (Teleconsulta)",
                 "A Domicilio/Remota (Teleconsulta)/En Oficina/Consultorio", "A Domicilio/En Oficina/Consultorio"};
-        String [] opciones2={"Localidad", "El Cármen", "Humahuaca", "La Quiaca", "Libertador Gral. San Martín", "Palpalá", "Perico",
+        String [] opciones4={"Localidad", "El Cármen", "Humahuaca", "La Quiaca", "Libertador Gral. San Martín", "Palpalá", "Perico",
                 "Purmamarca", "San Antonio", "San Salvador de Jujuy", "San Pedro de Jujuy", "Tilcara"};
-        String [] opciones3={"Zona de la Localidad", "Norte", "Sur", "Este", "Oeste", "Centro"};
-        String [] opciones4={"Modalidad de atención", "Local físico", "Tienda virtual"};
-        String [] opciones5={"Delivery", "Si", "No"};
-        String [] opciones6={"¿Comercias alguno de estos productos?", "Sin TACC", "Contra el Covid-19", "Eco Productos (mejorar el medio ambiente)"};
-        ArrayAdapter<String> adapter = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones);
-        ArrayAdapter<String> adapter1 = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones1);
-        ArrayAdapter<String> adapter2 = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones2);
+        String [] opciones5={"Zona de la Localidad", "Norte", "Sur", "Este", "Oeste", "Centro"};
+        String [] opciones6={"Modalidad de atención", "Local físico", "Tienda virtual"};
+        String [] opciones7={"Delivery", "Si", "No"};
+        String [] opciones8={"¿Comercias alguno de estos productos?", "Sin TACC", "Contra el Covid-19", "Eco Productos (mejorar el medio ambiente)"};
         ArrayAdapter<String> adapter3 = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones3);
-        ArrayAdapter<String> adapter4= new ArrayAdapter<> (this, R.layout.spner_item_color,opciones4);
-        ArrayAdapter<String> adapter5= new ArrayAdapter<> (this, R.layout.spner_item_color,opciones5);
-        ArrayAdapter<String> adapter6= new ArrayAdapter<> (this, R.layout.spner_item_color, opciones6);
-        cateEt.setAdapter(adapter);
-        modaEt.setAdapter(adapter1);
-        locaEt.setAdapter(adapter2);
-        zonaEt.setAdapter(adapter3);
-        modaateEt.setAdapter(adapter4);
-        deliEt.setAdapter(adapter5);
-        producEt.setAdapter(adapter6);
+        ArrayAdapter<String> adapter4 = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones4);
+        ArrayAdapter<String> adapter5 = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones5);
+        ArrayAdapter<String> adapter6= new ArrayAdapter<String> (this, R.layout.spner_item_color,opciones6);
+        ArrayAdapter<String> adapter7= new ArrayAdapter<String> (this, R.layout.spner_item_color,opciones7);
+        ArrayAdapter<String> adapter8= new ArrayAdapter<String> (this, R.layout.spner_item_color, opciones8);
+        modaEt.setAdapter(adapter3);
+        locaEt.setAdapter(adapter4);
+        zonaEt.setAdapter(adapter5);
+        modaateEt.setAdapter(adapter6);
+        deliEt.setAdapter(adapter7);
+        producEt.setAdapter(adapter8);
         //Inicializacion
         actionBar = getSupportActionBar();
         //Titulo
@@ -119,6 +121,10 @@ public class AgregarRegistroActivity extends AppCompatActivity {
         linkeEt = findViewById(R.id.linkeEt);
         descriEt = findViewById(R.id.descriEt);
         saveBtn = findViewById(R.id.saveBtn);
+        modaEt.setEnabled(false);
+        modaateEt.setEnabled(false);
+        deliEt.setEnabled(false);
+        producEt.setEnabled(false);
 
         //Inicializar BD Helper
         dbHelper = new MyDbHelper(this);
@@ -143,14 +149,46 @@ public class AgregarRegistroActivity extends AppCompatActivity {
         });
     }
 
+    public void radioprofe (View view){
+        String[] opciones1 = {"Categoria", "Asesoramiento Contable y Legal", "Belleza y Cuidado Personal", "Comunicación y Diseño",
+                "Cursos y Clases", "Delivery", "Fiestas y Eventos", "Fotografía, Música y Cine", "Hogar y Construcción",
+                "Imprenta", "Mantenimiento de Vehículos", "Medicina, Salud y Asistentes Domiciliarios", "Ropa y Moda",
+                "Servicios para Mascotas", "Servicios para Oficinas", "Tecnología", "Transporte", "Viajes y Turismo", "Arte"};
+        ArrayAdapter<String> adapter1 = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones1);
+        cateEt.setAdapter(adapter1);
+        modaEt.setEnabled(true);
+        modaateEt.setEnabled(false);
+        deliEt.setEnabled(false);
+        producEt.setEnabled(false);
+
+    }
+
+
+    public void radioempre (View view){
+        String[] opciones2 = {"Categoria", "Accesorios para Motos", "Accesorios para Vehículos", "Agro", "Alimentos y Bebidas",
+                "Animales y Mascotas", "Antigüedades y Colecciones", "Arte, Librería y Mercería", "Autos, Motos y Otros",
+                "Bebés", "Belleza y Cuidado Personal", "Celulares y Teléfonos", "Computación", "Consolas y Videojuegos",
+                "Cámaras y Accesorios", "Deportes y Fitness", "Electrodomésticos", "Electrónica, Audio y Video", "Entradas para Eventos",
+                "Herramientas y Construcción", "Hogar, Muebles y Jardín", "Industrias y Oficinas", "Inmuebles", "Instrumentos Musicales",
+                "Joyas y Relojes", "Juegos y Juguetes", "Libros, Revistas y Comics", "Música, Películas y Series", "Ropa y Accesorios",
+                "Salud y Equipamiento Médico", "Souvenirs, Cotillón y Fiestas", "Alimentos Vegetarianos", "Marroquineria"};
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.spner_item_color, opciones2);
+        cateEt.setAdapter(adapter2);
+        modaEt.setEnabled(false);
+        modaateEt.setEnabled(true);
+        deliEt.setEnabled(true);
+        producEt.setEnabled(true);
+    }
+
     private void inputData(){
         //get data
         name = ""+nameEt.getText().toString().trim();
+        regis = ""+radio_grup.getCheckedRadioButtonId();
         cate = ""+cateEt.getSelectedItem().toString().trim();
         moda = ""+modaEt.getSelectedItem().toString().trim();
-        moda_ate=""+modaateEt.getSelectedItem().toString().trim();
-        deli=""+deliEt.getSelectedItem().toString().trim();
-        produc=""+producEt.getSelectedItem().toString().trim();
+        moda_ate= ""+modaateEt.getSelectedItem().toString().trim();
+        deli= ""+deliEt.getSelectedItem().toString().trim();
+        produc= ""+producEt.getSelectedItem().toString().trim();
         dire = ""+direEt.getText().toString().trim();
         loca = ""+locaEt.getSelectedItem().toString().trim();
         zona= ""+zonaEt.getSelectedItem().toString().trim();
@@ -165,6 +203,7 @@ public class AgregarRegistroActivity extends AppCompatActivity {
         String timestamp = ""+System.currentTimeMillis();
         long id = dbHelper.insertRecord(
                 ""+name,
+                ""+regis,
                 ""+cate,
                 ""+moda,
                 ""+moda_ate,

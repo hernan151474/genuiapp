@@ -24,8 +24,8 @@
                 android:layout_marginStart="150dp"
                 android:layout_marginLeft="160dp"
                 android:layout_marginTop="15dp"
-                android:src="@drawable/ic_photo_black"
                 android:background="@drawable/redondear_imagen"
+                android:src="@drawable/ic_photo_black"
                 tools:ignore="MissingConstraints" />
 
             <EditText
@@ -40,6 +40,42 @@
                 android:inputType="textPersonName|textCapWords"
                 android:padding="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioGroup
+                android:id="@+id/radio_grup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioprofe"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:checked="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:onClick="radioprofe"
+                    android:text="Oficio y Profesion"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/radioempre"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:checked="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:onClick="radioempre"
+                    android:text="Emprendimiento y PYME"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
 
             <Spinner
                 android:id="@+id/cateEt"

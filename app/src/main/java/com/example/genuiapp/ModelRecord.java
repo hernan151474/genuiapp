@@ -3,14 +3,15 @@ package com.example.genuiapp;
 /* Modelo de la clase para RecyclerView*/
 public class ModelRecord {
     //Variables
-    String user, password, id, name, cate, moda, moda_ate, deli, produc, dire, loca, zona, phone, face, insta, linke, descri, image, addedTime, updatedTime;
+    String user, password, id, name, regis, cate, moda, moda_ate, deli, produc, dire, loca, zona, phone, face, insta, linke, descri, image, addedTime, updatedTime;
 
     //Constructor
 
-    public ModelRecord(String id, String name, String cate, String moda, String moda_ate, String deli, String produc, String dire, String loca,
+    public ModelRecord(String id, String name, String regis, String cate, String moda, String moda_ate, String deli, String produc, String dire, String loca,
                        String zona, String phone, String face, String insta, String linke, String descri, String image, String addedTime, String updatedTime) {
         this.id = id;
         this.name = name;
+        this.regis = regis;
         this.cate = cate;
         this.moda = moda;
         this.moda_ate = moda_ate;
@@ -37,6 +38,10 @@ public class ModelRecord {
 
     //Getter y Setter
 
+
+    public String getRegis() { return regis; }
+
+    public void setRegis(String regis) { this.regis = regis; }
 
     public String getUser() {
         return user;

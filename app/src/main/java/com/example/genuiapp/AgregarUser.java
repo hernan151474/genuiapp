@@ -53,7 +53,4 @@ public class AgregarUser extends AppCompatActivity {
             }
         }
     }
-
-
-
 }

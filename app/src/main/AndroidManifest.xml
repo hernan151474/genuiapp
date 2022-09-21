@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Genuiapp">
         <activity
-            android:name=".AgregarRegistroActivity"
-            android:exported="false" />
-        <activity
             android:name=".ActivityInicio"
             android:exported="true">
             <intent-filter>
@@ -39,6 +36,11 @@
         <activity
             android:name=".ObjetivosActivity"
             android:exported="false" />
+        <activity
+            android:name=".AgregarRegistroActivity"
+            android:exported="false" />
+        <activity android:name=".DetalleRegistroActivity"
+            android:exported="false"/>
         <activity
             android:name=".Que_Hacemos"
             android:exported="false" />

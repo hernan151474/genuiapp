@@ -45,6 +45,13 @@ public class AdapterRecord extends RecyclerView.Adapter<AdapterRecord.HolderReco
         final String id = model.getId();
         String name = model.getName();
         String cate = model.getCate();
+        String moda = model.getModa();
+        String modaate = model.getModa_ate();
+        String deli = model.getDeli();
+        String produc = model.getProduc();
+        String dire = model.getDire();
+        String loca = model.getLoca();
+        String zona = model.getZona();
         String phone = model.getPhone();
         String face = model.getFace();
         String insta = model.getInsta();

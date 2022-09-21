@@ -15,7 +15,7 @@ public class ComercioActivity extends AppCompatActivity {
 
     private RecyclerView recordsRv;
 
-    private EditText resultado;
+
 
     //DB Helper
     private MyDbHelper dbHelper;
@@ -61,7 +61,6 @@ public class ComercioActivity extends AppCompatActivity {
 
         //Establecer el numero de Registros
         actionBar.setSubtitle("Total: "+dbHelper.getRecordsCount());
-        //resultado.setText(dbHelper.getRecordsCount());
     }
 
     @Override

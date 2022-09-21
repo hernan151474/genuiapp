@@ -23,7 +23,7 @@ public class DetalleRegistroActivity extends AppCompatActivity {
 
     //vistas
     private ImageView profileIv;
-    private TextView nameTv,cateTv,modaTv,direTv, locaTv, zonaTv, phoneTv, faceTv, instaTv, linkeTv, descriTv, addedTimeTv, updatedTimeTv;
+    private TextView nameTv,cateTv,modaTv, modaateTv, deliTv, producTv, direTv, locaTv, zonaTv, phoneTv, faceTv, instaTv, linkeTv, descriTv, addedTimeTv, updatedTimeTv;
 
     //ActionBar
     private ActionBar actionBar;
@@ -58,6 +58,9 @@ public class DetalleRegistroActivity extends AppCompatActivity {
         nameTv = findViewById(R.id.nameTv);
         cateTv = findViewById(R.id.cateTv);
         modaTv = findViewById(R.id.modaTv);
+        modaateTv = findViewById(R.id.modaateTv);
+        deliTv = findViewById(R.id.deliTv);
+        producTv = findViewById(R.id.producTv);
         direTv = findViewById(R.id.direTv);
         locaTv = findViewById(R.id.locaTv);
         zonaTv = findViewById(R.id.zonaTv);
@@ -88,6 +91,9 @@ public class DetalleRegistroActivity extends AppCompatActivity {
                 String name = ""+ cursor.getString(cursor.getColumnIndex(Constants.C_NAME));
                 String cate = ""+cursor.getString(cursor.getColumnIndex(Constants.C_CATE));
                 String moda = ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA));
+                String moda_ate = ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA_ATE));
+                String deli = ""+cursor.getString(cursor.getColumnIndex(Constants.C_DELI));
+                String produc = ""+cursor.getString(cursor.getColumnIndex(Constants.C_PRODUC));
                 String dire = ""+cursor.getString(cursor.getColumnIndex(Constants.C_DIRE));
                 String loca = ""+cursor.getString(cursor.getColumnIndex(Constants.C_LOCA));
                 String zona = ""+cursor.getString(cursor.getColumnIndex(Constants.C_ZONA));
@@ -114,6 +120,9 @@ public class DetalleRegistroActivity extends AppCompatActivity {
                 nameTv.setText(name);
                 cateTv.setText(cate);
                 modaTv.setText(moda);
+                modaateTv.setText(moda_ate);
+                deliTv.setText(deli);
+                producTv.setText(produc);
                 direTv.setText(dire);
                 locaTv.setText(loca);
                 zonaTv.setText(zona);
@@ -129,7 +138,7 @@ public class DetalleRegistroActivity extends AppCompatActivity {
                 // configure una imagen predeterminada en ese caso
                 if (image.equals("null")){
                     // no hay imagen en el registro, establecer predeterminado
-                    profileIv= findViewById(R.drawable.logochico);
+                    profileIv = findViewById(R.drawable.logochico);
                 }
                 else {
                     // tener imagen en el registro

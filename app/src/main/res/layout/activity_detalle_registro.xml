@@ -105,6 +105,72 @@
 
             </TableRow>
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Modalidad de Atencion"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/modaateTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Modalidad de Atencion"
+                    android:textColor="#000000" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView50"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Delivery"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/deliTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Delivery"
+                    android:textColor="#000000" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView51"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Productos"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/producTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Producto"
+                    android:textColor="#000000" />
+            </TableRow>
+
             <TableRow>
 
                 <TextView

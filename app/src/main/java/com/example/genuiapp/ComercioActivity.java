@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toolbar;
 
 public class ComercioActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class ComercioActivity extends AppCompatActivity {
     private MyDbHelper dbHelper;
 
     ActionBar actionBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +39,6 @@ public class ComercioActivity extends AppCompatActivity {
         actionBar.setTitle("Registros");
 
         loadRecords();
-
-        // Click para Iniciar a añadir y grabar en la activity
-       // genui_btn.setOnClickListener(new View.OnClickListener() {
-         //  @Override
-           // public void onClick(View v) {
-                //Iniciar la Activity
-             //   startActivity(new Intent(ComercioActivity.this, AgregarRegistroActivity.class));
-            //}
-        //});
     }
 
     public void registrar_genui (View view){

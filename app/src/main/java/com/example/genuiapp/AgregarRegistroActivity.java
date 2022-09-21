@@ -41,6 +41,9 @@ public class AgregarRegistroActivity extends AppCompatActivity {
     private EditText descriEt;
     private FloatingActionButton saveBtn;
     private Spinner cateEt;
+    private Spinner modaateEt;
+    private Spinner deliEt;
+    private Spinner producEt;
     //Actionbar
     private ActionBar actionBar;
     //Permiso de la clase Constants
@@ -66,6 +69,9 @@ public class AgregarRegistroActivity extends AppCompatActivity {
         modaEt=(Spinner)findViewById(R.id.modaEt);
         locaEt=(Spinner)findViewById(R.id.locaEt);
         zonaEt=(Spinner)findViewById(R.id.zonaEt);
+        modaateEt=(Spinner) findViewById(R.id.modaateEt);
+        deliEt=(Spinner)findViewById(R.id.deliEt);
+        producEt=(Spinner) findViewById(R.id.producEt);
         String [] opciones={"Categoria", "Asesoramiento Contable y Legal", "Belleza y Cuidado Personal", "Comunicación y Diseño",
                 "Cursos y Clases", "Delivery", "Fiestas y Eventos", "Fotografía, Música y Cine", "Hogar y Construcción",
                 "Imprenta", "Mantenimiento de Vehículos", "Medicina, Salud y Asistentes Domiciliarios", "Ropa y Moda",
@@ -75,14 +81,23 @@ public class AgregarRegistroActivity extends AppCompatActivity {
         String [] opciones2={"Localidad", "El Cármen", "Humahuaca", "La Quiaca", "Libertador Gral. San Martín", "Palpalá", "Perico",
                 "Purmamarca", "San Antonio", "San Salvador de Jujuy", "San Pedro de Jujuy", "Tilcara"};
         String [] opciones3={"Zona de la Localidad", "Norte", "Sur", "Este", "Oeste", "Centro"};
+        String [] opciones4={"Modalidad de atención", "Local físico", "Tienda virtual"};
+        String [] opciones5={"Delivery", "Si", "No"};
+        String [] opciones6={"¿Comercias alguno de estos productos?", "Sin TACC", "Contra el Covid-19", "Eco Productos (mejorar el medio ambiente)"};
         ArrayAdapter<String> adapter = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones);
         ArrayAdapter<String> adapter1 = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones1);
         ArrayAdapter<String> adapter2 = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones2);
         ArrayAdapter<String> adapter3 = new ArrayAdapter <String> (this, R.layout.spner_item_color,opciones3);
+        ArrayAdapter<String> adapter4= new ArrayAdapter<> (this, R.layout.spner_item_color,opciones4);
+        ArrayAdapter<String> adapter5= new ArrayAdapter<> (this, R.layout.spner_item_color,opciones5);
+        ArrayAdapter<String> adapter6= new ArrayAdapter<> (this, R.layout.spner_item_color, opciones6);
         cateEt.setAdapter(adapter);
         modaEt.setAdapter(adapter1);
         locaEt.setAdapter(adapter2);
         zonaEt.setAdapter(adapter3);
+        modaateEt.setAdapter(adapter4);
+        deliEt.setAdapter(adapter5);
+        producEt.setAdapter(adapter6);
         //Inicializacion
         actionBar = getSupportActionBar();
         //Titulo
@@ -133,6 +148,9 @@ public class AgregarRegistroActivity extends AppCompatActivity {
         name = ""+nameEt.getText().toString().trim();
         cate = ""+cateEt.getSelectedItem().toString().trim();
         moda = ""+modaEt.getSelectedItem().toString().trim();
+        moda_ate=""+modaateEt.getSelectedItem().toString().trim();
+        deli=""+deliEt.getSelectedItem().toString().trim();
+        produc=""+producEt.getSelectedItem().toString().trim();
         dire = ""+direEt.getText().toString().trim();
         loca = ""+locaEt.getSelectedItem().toString().trim();
         zona= ""+zonaEt.getSelectedItem().toString().trim();

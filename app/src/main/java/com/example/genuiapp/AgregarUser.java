@@ -28,21 +28,29 @@ public class AgregarUser extends AppCompatActivity {
     }
 
     public void registrar(View view) {
-
+        String email_resgitrar = registrar_user.getText().toString();
         String password_registrar = registrar_password.getText().toString();
         String password_confirmar = confirmar_password.getText().toString();
-        if (password_registrar.contentEquals(password_confirmar)) {
-            user = ""+registrar_user.getText().toString().trim();
-            password = ""+registrar_password.getText().toString().trim();
-            dbHelper.insertUser(
-                    ""+user,
-                    ""+password
-            );
-            Toast.makeText(this, "Se Registro con Exito!!", Toast.LENGTH_SHORT).show();
-        } else{
-            Toast.makeText(this, "No Coincide las Contraseñas, Ingrese Nuevamente", Toast.LENGTH_SHORT).show();
-            registrar_password.setText("");
-            confirmar_password.setText("");
+        if (email_resgitrar.isEmpty() && password_registrar.isEmpty() && password_confirmar.isEmpty()) {
+            Toast.makeText(this, "Ingrese un correo y una contraseña!!!", Toast.LENGTH_SHORT).show();
+        } else {
+            if (!email_resgitrar.isEmpty() && password_registrar.isEmpty() && password_confirmar.isEmpty()) {
+                Toast.makeText(this, "Ingrese una contraseña y confirme contraseña!!!", Toast.LENGTH_SHORT).show();
+            } else {
+                if (password_registrar.contentEquals(password_confirmar)) {
+                    user = "" + registrar_user.getText().toString().trim();
+                    password = "" + registrar_password.getText().toString().trim();
+                    dbHelper.insertUser(
+                            "" + user,
+                            "" + password
+                    );
+                    Toast.makeText(this, "Se Registro con Exito!!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "No Coincide las Contraseñas, Ingrese Nuevamente", Toast.LENGTH_SHORT).show();
+                    registrar_password.setText("");
+                    confirmar_password.setText("");
+                }
+            }
         }
     }
 

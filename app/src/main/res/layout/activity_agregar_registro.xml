@@ -63,6 +63,39 @@
                 android:padding="10dp"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
+            <Spinner
+                android:id="@+id/modaateEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="15dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Spinner
+                android:id="@+id/deliEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="15dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Spinner
+                android:id="@+id/producEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="15dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
             <EditText
                 android:id="@+id/direEt"
                 android:layout_width="match_parent"

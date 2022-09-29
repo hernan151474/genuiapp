@@ -154,6 +154,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
         return recordsList;
     }
 
+
     //Buscar todos datos
     public ArrayList<ModelRecord> searchRecords(String query){
         // la orden de consulta permitirá ordenar los datos más nuevo / más antiguo primero, nombre ascendente / descendente
@@ -217,6 +218,67 @@ public class MyDbHelper extends SQLiteOpenHelper {
         return count;
     }
 
+    public ArrayList<ModelRecord> getAllRecords1(String orderBy){
+        // la orden de consulta permitirá ordenar los datos más nuevo / más antiguo primero, nombre ascendente / descendente
+        // devolverá la lista o registros ya que hemos utilizado return tipo ArrayList <ModelRecord>
 
+        ArrayList<ModelRecord> recordsList = new ArrayList<>();
+        // consulta para seleccionar registros
+        String selectQuery = " SELECT * FROM " + Constants.TABLE_NAME + " WHERE " +Constants.C_REGIS + "=2131362442" + " ORDER BY " + orderBy;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // recorrer todos los registros y agregarlos a la lista
+        if ( cursor.moveToFirst()){
+            do {
+
+                @SuppressLint("Range") ModelRecord modelRecord = new ModelRecord(
+                        ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_NAME)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_REGIS)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_CATE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODA_ATE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_DELI)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_PRODUC)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_DIRE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_LOCA)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_ZONA)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_PHONE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_FACE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_INSTA)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_LINKE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_DESCRI)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_IMAGE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_ADDED_TIMESTAMP)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_UPDATED_TIMESTAMP)));
+
+                // Añadir registro a la list
+                recordsList.add(modelRecord);
+            }while (cursor.moveToNext());
+        }
+
+        //cierre de conexión db
+
+        db.close();
+
+        //retorna la lista
+        return recordsList;
+    }
+
+
+
+    public int getRecordsCount1(){
+        String countQuery = " SELECT * FROM " + Constants.TABLE_NAME + " WHERE " +Constants.C_REGIS + "=2131362442";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+
+        int count = cursor.getCount();
+
+        cursor.close();
+
+        return count;
+    }
 
 }

@@ -359,4 +359,10 @@ public class AgregarRegistroActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        //image picked from camera or gallery will be received hare
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
 }

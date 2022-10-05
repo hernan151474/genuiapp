@@ -224,7 +224,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
 
         ArrayList<ModelRecord> recordsList = new ArrayList<>();
         // consulta para seleccionar registros
-        String selectQuery = " SELECT * FROM " + Constants.TABLE_NAME + " WHERE " +Constants.C_REGIS + "=2131362442" + " ORDER BY " + orderBy;
+        String selectQuery = " SELECT * FROM " + Constants.TABLE_NAME + " WHERE " +Constants.C_REGIS + "=2131362209" + " ORDER BY " + orderBy;
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -270,7 +270,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
 
 
     public int getRecordsCount1(){
-        String countQuery = " SELECT * FROM " + Constants.TABLE_NAME + " WHERE " +Constants.C_REGIS + "=2131362442";
+        String countQuery = " SELECT * FROM " + Constants.TABLE_NAME + " WHERE " +Constants.C_REGIS + "=2131362209";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
 

@@ -24,7 +24,7 @@
                 android:layout_marginStart="150dp"
                 android:layout_marginLeft="160dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/redondear_imagen"
+                android:background="@drawable/imagen_redonda"
                 tools:ignore="MissingConstraints" />
 
             <EditText

@@ -363,6 +363,8 @@ public class AgregarRegistroActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         //image picked from camera or gallery will be received hare
         super.onActivityResult(requestCode, resultCode, data);
+        imageUri = data.getData();
+        profileIv.setImageURI(imageUri);
     }
 
 }

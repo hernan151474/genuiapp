@@ -33,7 +33,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/redondear_imagen"
+                android:background="@drawable/imagen_redonda"
                 android:src="@drawable/ic_person_black" />
 
             <LinearLayout

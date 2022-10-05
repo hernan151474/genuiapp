@@ -20,7 +20,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
             android:src="@drawable/ic_person_black"
-             />
+            android:background="@drawable/imagen_redonda" />
 
         <!-- tabla de otros datos -->
 

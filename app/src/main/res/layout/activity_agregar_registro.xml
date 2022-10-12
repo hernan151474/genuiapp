@@ -17,13 +17,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileIv"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_marginStart="150dp"
                 android:layout_marginLeft="160dp"
                 android:layout_marginTop="15dp"
+                android:src="@drawable/ic_photo_black"
                 android:background="@drawable/imagen_redonda"
                 tools:ignore="MissingConstraints" />
 

@@ -18,11 +18,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
 import java.util.Locale;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class DetalleRegistroActivity extends AppCompatActivity {
 
     //vistas
-    private ImageView profileIv;
+    private CircleImageView profileIv;
     private TextView nameTv,cateTv,modaTv, modaateTv, deliTv, producTv, direTv, locaTv, zonaTv, phoneTv, faceTv, instaTv, linkeTv, descriTv, addedTimeTv, updatedTimeTv;
 
     //ActionBar

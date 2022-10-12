@@ -27,10 +27,12 @@ import androidx.core.content.ContextCompat;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class AgregarRegistroActivity extends AppCompatActivity {
 
     //View
-    private ImageView profileIv;
+    private CircleImageView profileIv;
     private EditText nameEt;
     private Spinner modaEt;
     private EditText direEt;

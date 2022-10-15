@@ -25,6 +25,4 @@ public class ActivityInicio extends AppCompatActivity {
         Intent registrar = new Intent(this, AgregarUser.class);
         startActivity(registrar);
     }
-
-
 }

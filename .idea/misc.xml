@@ -29,6 +29,7 @@
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/imagen_redonda.xml" value="0.171" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/linea_division.xml" value="0.1" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/redondear_imagen.xml" value="0.1" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/drawable/side_nav_bar.xml" value="0.171" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/font/roboto_bold (2).xml" value="0.1" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_agregar_registro.xml" value="0.25" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_agregar_user.xml" value="0.2536231884057971" />
@@ -37,6 +38,7 @@
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_foco_alcance.xml" value="0.245018115942029" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_inicio.xml" value="0.2536231884057971" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_menu.xml" value="0.2546875" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_objetivos.xml" value="0.33" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_oficio.xml" value="0.33" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_que_es_genui.xml" value="0.245018115942029" />
@@ -46,6 +48,12 @@
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_splash_screen.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_valor.xml" value="0.33" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/activity_version_hitos.xml" value="0.245018115942029" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/app_bar_menu.xml" value="0.26875" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/content_menu.xml" value="0.26875" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/fragment_gallery.xml" value="0.26875" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/fragment_home.xml" value="0.26875" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/fragment_slideshow.xml" value="0.26875" />
+        <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/nav_header_menu.xml" value="0.26875" />
         <entry key="..\:/Users/Juan Carlos/AndroidStudioProjects/genuiapp/app/src/main/res/layout/row_record.xml" value="0.33" />
       </map>
     </option>

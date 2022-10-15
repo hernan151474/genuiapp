@@ -54,6 +54,33 @@ public class MyDbHelper extends SQLiteOpenHelper {
         return id;
     }
 
+    public ArrayList<ModelRecordUser> getAllRecords(String user, String password) {
+        SQLiteDatabase db =this.getWritableDatabase();
+        ArrayList<ModelRecordUser> recordsList = new ArrayList<>();
+        String selectQuery = " SELECT * FROM " + Constants.TABLE_USER + " WHERE " +Constants.C_USER + " AND " + Constants.C_PASSWORD;
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()){
+            do {
+                @SuppressLint("Range") ModelRecordUser modelRecord = new ModelRecordUser(
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_USER)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_PASSWORD)));
+                recordsList.add(modelRecord);
+            }while (cursor.moveToNext());
+        }
+        db.close();
+        return recordsList;
+    }
+
+    public Boolean checkusernamepassword(String user, String password){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        Cursor cursor = MyDB.rawQuery("Select * from user where user = ? and password = ?", new String[] {user,password});
+        if(cursor.getCount()>0)
+            return true;
+        else
+            return false;
+    }
+
+
     //Inserta datos a la base de datos
     public long insertRecord(String name, String regis, String cate, String moda, String moda_ate, String deli, String produc, String dire, String loca,
                              String zona, String phone, String face, String insta, String linke, String descri, String image, String addedTime, String updatedTime){
@@ -280,5 +307,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
 
         return count;
     }
+
+
 
 }
